@@ -142,7 +142,7 @@ class CreateBlogView extends BaseView<CreateBlogViewModel> {
                               Container(
                                 color: viewModel.type == 'Sports'
                                     ? AppColors.backgroundColorButton
-                                    : Colors.white,
+                                    : Theme.of(context).backgroundColor,
                                 child: TextButton(
                                   onPressed: () {
                                     viewModel.choseType(0);
@@ -160,7 +160,7 @@ class CreateBlogView extends BaseView<CreateBlogViewModel> {
                               Container(
                                 color: viewModel.type == 'Movies'
                                     ? AppColors.backgroundColorButton
-                                    : Colors.white,
+                                    : Theme.of(context).backgroundColor,
                                 child: TextButton(
                                   onPressed: () {
                                     viewModel.choseType(1);

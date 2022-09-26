@@ -37,11 +37,11 @@ class LoginView extends BaseView<LoginViewModel> {
       }
     }
 
-    useEffect(() {
-      usernameController.text = 'bao@gmail.com';
-      passwordController.text = '12341234';
-      onChangeInut();
-    });
+    // useEffect(() {
+    //   usernameController.text = 'bao@gmail.com';
+    //   passwordController.text = '12341234';
+    //   onChangeInut();
+    // });
 
     Future<void> onLoggin() async {
       await loginViewModel.tapLogin(

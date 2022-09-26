@@ -5,7 +5,6 @@ import 'package:blog/ui/create_blog/create_blog_view_model.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:blog/ui/home/home_view_model.dart';
 import 'package:blog/ui/auth_pages/login/login_view_model.dart';
-import 'package:blog/ui/setting_pages/abouts/about/about_view_model.dart';
 import 'package:blog/ui/setting_pages/general_pages/dart_mode/dart_mode_view_model.dart';
 import 'package:blog/ui/setting_pages/setting/setting_view_model.dart';
 
@@ -37,11 +36,6 @@ final blogViewModelProvider =
 
 final createBlogViewModelProvider =
     ChangeNotifierProvider<CreateBlogViewModel>((ref) => CreateBlogViewModel(
-          ref.read,
-        ));
-
-final aboutViewModelProvider =
-    ChangeNotifierProvider<AboutViewModel>((ref) => AboutViewModel(
           ref.read,
         ));
 

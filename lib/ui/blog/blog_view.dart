@@ -1,26 +1,17 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:blog/route/app_route.gr.dart';
 import 'package:blog/ui/base/common/app_func.dart';
 import 'package:blog/ui/base/common/network_image.dart';
 import 'package:blog/ui/base/common/search_view.dart';
 import 'package:blog/ui/base/component/app_bar_custom/app_bar_custom.dart';
 import 'package:blog/ui/base/component/loading/container_with_loading.dart';
 import 'package:blog/ui/base/hook/use_effect_async.dart';
-import 'package:blog/ui/base/hook/use_localizations.dart';
 import 'package:blog/ui/base/hook/use_router.dart';
 import 'package:blog/ui/blog/blog_view_model.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:blog/data/model/remote/response/display_profile_response.dart';
 import 'package:blog/di/view_model_provider.dart';
 import 'package:blog/ui/base/base_view.dart';
-import 'package:blog/ui/setting_pages/setting/setting_view_model.dart';
-import 'package:blog/ui/setting_pages/setting/views/custom_item_setting.dart';
 import 'package:blog/ui/themes/app_color.dart';
-import 'package:blog/ui/themes/custom_container.dart';
-import 'package:blog/ui/themes/text_styles.dart';
 
 class BlogView extends BaseView<BlogViewModel> {
   // DisplayProfileResponse inforProfile;
@@ -62,7 +53,7 @@ class BlogView extends BaseView<BlogViewModel> {
                           child: Container(
                             color: blogViewModel.type == ''
                                 ? AppColors.backgroundColorButton
-                                : Colors.white,
+                                : Theme.of(context).backgroundColor,
                             child: TextButton(
                               onPressed: () {
                                 blogViewModel.choseType(2);
@@ -78,7 +69,7 @@ class BlogView extends BaseView<BlogViewModel> {
                           child: Container(
                             color: blogViewModel.type == 'Sports'
                                 ? AppColors.backgroundColorButton
-                                : Colors.white,
+                                : Theme.of(context).backgroundColor,
                             child: TextButton(
                               onPressed: () {
                                 blogViewModel.choseType(0);
@@ -94,7 +85,7 @@ class BlogView extends BaseView<BlogViewModel> {
                           child: Container(
                             color: blogViewModel.type == 'Movies'
                                 ? AppColors.backgroundColorButton
-                                : Colors.white,
+                                : Theme.of(context).backgroundColor,
                             child: TextButton(
                               onPressed: () {
                                 blogViewModel.choseType(1);

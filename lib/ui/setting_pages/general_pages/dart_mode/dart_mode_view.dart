@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:blog/di/service_provider.dart';
 import 'package:blog/di/view_model_provider.dart';
 import 'package:blog/ui/base/base_view.dart';
 import 'package:blog/ui/setting_pages/general_pages/dart_mode/dart_mode_view_model.dart';

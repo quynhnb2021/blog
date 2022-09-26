@@ -86,28 +86,31 @@ class SettingView extends BaseView<SettingViewModel> {
                     title: "Version ",
                     value: '1.0.0',
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          'Dark Mode',
-                          style: Theme.of(context).textTheme.titleMedium,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            'Dark Mode',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
                         ),
-                      ),
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            CupertinoSwitch(
-                              value: viewModel.isDarkModeActive,
-                              onChanged: (value) {
-                                viewModel.onChangedDarkMode(value);
-                              },
-                            ),
-                          ],
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              CupertinoSwitch(
+                                value: viewModel.isDarkModeActive,
+                                onChanged: (value) {
+                                  viewModel.onChangedDarkMode(value);
+                                },
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
